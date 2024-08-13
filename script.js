@@ -46,10 +46,12 @@ function mostrarPerguntas(){
     caixaperguntas.textContent = perguntaAtual.enunciado;
 
 }
-function mostrarPerguntas(){
+function mostraAlternativas(){
     for (const alternativas of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativas;
-        caixaalternativas.appendChild(botaoAlternativa)
+        caixaalternativas.appendChild(botaoAlternativa);
     }
 }
+
+mostrarPerguntas();
