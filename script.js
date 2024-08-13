@@ -15,6 +15,17 @@ const perguntas = [
      },
      {    
         enunciado: " No âmbito tecnológico, você prefere:",
-        alternativas: ["alternativa 1, alternativa 2"]
-    } 
+        alternativas: ["alternativa 5, alternativa 6"]
+    }
+
 ]
+
+let atual = 0;
+let perguntaAtual;
+
+function mostrarPerguntas(){
+    perguntaAtual = peruntas[atual];
+    caixaperguntas.textContent = perguntaAtual.enunciado;
+
+}
+mostrarPerguntas();
