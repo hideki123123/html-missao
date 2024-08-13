@@ -44,12 +44,13 @@ let perguntaAtual;
 function mostrarPerguntas(){
     perguntaAtual = peruntas[atual];
     caixaperguntas.textContent = perguntaAtual.enunciado;
-
+caixaalternativas.textContent="";
+    mostraAlternativas();
 }
 function mostraAlternativas(){
     for (const alternativas of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
-        botaoAlternativa.textContent = alternativas;
+        botaoAlternativa.textContent = alternativas.texto;
         caixaalternativas.appendChild(botaoAlternativa);
     }
 }
