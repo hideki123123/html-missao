@@ -13,19 +13,20 @@ const perguntas = [
             }
                
             ]
-        
-    },
-     {
+        },
+
+            {
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
             {
             texto: "alterativa 1",
             afirmacao: "afirmacao 2",
-         }
-        ]
+            }
+            ]
     
-     },
-     {    
+         },
+
+        {    
         enunciado: " No âmbito tecnológico, você prefere:",
         alternativas: [
             {
@@ -33,7 +34,7 @@ const perguntas = [
                 afirmacao: "afirmacao 2",
             }
         ]
-    }
+    },
 
 ]
 
