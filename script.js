@@ -11,22 +11,22 @@ const perguntas = [
                 texto: "alterativa 1",
                 afirmacao: "afirmacao 1",
             }
-               
-            ]
-        },
 
-            {
+        ]
+    },
+
+    {
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
             {
-            texto: "alterativa 3",
-            afirmacao: "afirmacao 3",
+                texto: "alterativa 3",
+                afirmacao: "afirmacao 3",
             }
-            ]
-    
-         },
+        ]
 
-        {    
+    },
+
+    {
         enunciado: " No âmbito tecnológico, você prefere:",
         alternativas: [
             {
@@ -41,21 +41,20 @@ const perguntas = [
 let atual = 0;
 let perguntaAtual;
 
-function mostrarPerguntas(){
+function mostrarPerguntas() {
     perguntaAtual = perguntas[atual];
     caixaperguntas.textContent = perguntaAtual.enunciado;
-    caixaalternativas.textContent="";
+    caixaalternativas.textContent = "";
     mostraAlternativas();
 }
-function mostraAlternativas(){
+function mostraAlternativas() {
     for (const alternativas of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativas.texto;
-        botaoAlternativa.addEventListener("click", function(){
+        botaoAlternativa.addEventListener("click", function () {
             atual++;
             mostrarPerguntas();
         })
-        
         caixaalternativas.appendChild(botaoAlternativa);
     }
 }
