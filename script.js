@@ -8,8 +8,8 @@ const perguntas = [
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
             {
-                texto: "alterativa 1",
-                afirmacao: "afirmacao 1",
+                texto: "você vai ter muito dinheiro, mas",
+                afirmacao: "só pode gastar esse dinheiro no país Butão",
             }
 
         ]
@@ -19,8 +19,8 @@ const perguntas = [
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
             {
-                texto: "alterativa 3",
-                afirmacao: "afirmacao 3",
+                texto: "árvores nescem a cada óbito humano, mas",
+                afirmacao: "você é o primeiro a morrer",
             }
         ]
 
@@ -30,8 +30,8 @@ const perguntas = [
         enunciado: " No âmbito tecnológico, você prefere:",
         alternativas: [
             {
-                texto: "alterativa 5",
-                afirmacao: "afirmacao 5",
+                texto: "ter o melhor pc do mercado, mas",
+                afirmacao: "você não pode usar nem teclado e nem mouse",
             }
         ]
     },
