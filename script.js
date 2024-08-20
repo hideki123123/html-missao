@@ -1,6 +1,7 @@
 const caixaprincipal = document.querySelector('.caixa-principal');
 const caixaperguntas = document.querySelector(".caixa-perguntas");
 const caixaalternativas = document.querySelector('.caixa-alternativas');
+const caixaResultado = document.querySelector("caixaResultado");
 const caixaresultados = document.querySelector('.texto-resultado');
 
 const perguntas = [
@@ -14,7 +15,6 @@ const perguntas = [
 
         ]
     },
-
     {
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
@@ -23,10 +23,8 @@ const perguntas = [
                 afirmacao: "você é o primeiro a morrer",
             }
         ]
-
-    },
-
-    {
+        },
+        {
         enunciado: " No âmbito tecnológico, você prefere:",
         alternativas: [
             {
@@ -37,26 +35,29 @@ const perguntas = [
     },
 
 ]
-
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
-function mostrarPerguntas() {
+function mostraPerguntas(){
     perguntaAtual = perguntas[atual];
-    caixaperguntas.textContent = perguntaAtual.enunciado;
-    caixaalternativas.textContent = "";
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent="";
     mostraAlternativas();
 }
-function mostraAlternativas() {
-    for (const alternativas of perguntaAtual.alternativas) {
+function mostraAlternativas (){
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
-        botaoAlternativa.textContent = alternativas.texto;
-        botaoAlternativa.addEventListener("click", function () {
-            atual++;
-            mostrarPerguntas();
-        })
-        caixaalternativas.appendChild(botaoAlternativa);
+        botaoAlternativa.textContent = alternativa.texto;
+        botaoAlternativa.addEventListener("click", ()=> opcaoSelecionada(afirmacao));
+        caixaAlternativas.appendChild(botaoAlternativa);
+    }
+
+    function respostaSelecionada (opcaoSelecionada){
+        const afirmacoes = opcaoSelecionada.afirmacoes;
+
+        atual++;
+        mostraPerguntas()
     }
 }
-
-mostrarPerguntas();
+mostraPerguntas();
