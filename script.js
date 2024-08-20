@@ -9,12 +9,12 @@ const perguntas= [
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
             {
-                texto:"voce tera amigos confiaveis mas,",
-                afirmacao: "voce nao pode pedir nada para eles",
+                texto:"ser a pessoa mais rica do mundo, mas",
+                afirmacao: "você só pode comprar coisas infláveis",
             },
             {
-                texto:"o tiktok pararia de existir mas,",
-                afirmacao:"nada de ruim acontece",
+                texto:"voce se torna a pessoa mais amada do mundo, mas",
+                afirmacao:"a pessoa que você mais ama te odeia",
             },
     ]
     },
@@ -26,8 +26,8 @@ const perguntas= [
                 afirmacao: "o seu 3° @ falece",
             },
             {
-                texto:"as tartarugas poderiam usar canudos para tomar agua mas,",
-                afirmacao:"elas nao parariam de tomar até acabar",
+                texto:"você tira todo lixo da praia, mas",
+                afirmacao:"o lixo vai todo para sua casa",
             },
     ]
     },
@@ -35,12 +35,12 @@ const perguntas= [
         enunciado: "No âmbito tecnológico, você prefere:",
         alternativas: [
             {
-                texto:"elon musk te da todo o dinheiro dele, porém,",
-                afirmacao: "voce morre",
+                texto:"Elon musk te da toda sua fortuna, mas",
+                afirmacao: "você perde suas duas pernas",
             },
             {
-                texto:"fortnite é real mas...",
-                afirmacao:"fortnite é real",
+                texto:"ter o melhor pc do mercado, mas",
+                afirmacao:"você não pode usar teclado",
             },
     ]
     },   
@@ -70,5 +70,9 @@ historiaFinal = alternativa;
         atual++;
         mostraPerguntas()
     }
+}
+function mostraResultado(){
+    caixaPerguntas.textContent = "esse caba escolheu";
+    caixaAlternativas.textContent ="";
 }
 mostraPerguntas();
