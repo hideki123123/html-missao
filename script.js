@@ -51,6 +51,10 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPerguntas(){
+    if(atual >= perguntas.length){
+        mostraPerguntas();
+        return
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent="";
@@ -66,13 +70,14 @@ function mostraAlternativas (){
 
     function respostaSelecionada (opcaoSelecionada){
         const afirmacoes = opcaoSelecionada.afirmacoes;
-historiaFinal = alternativa;
+historiaFinal += afirmacoes + "";
         atual++;
         mostraPerguntas()
     }
 }
 function mostraResultado(){
     caixaPerguntas.textContent = "esse caba escolheu";
-    caixaAlternativas.textContent ="";
+    textResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent ="greed";
 }
 mostraPerguntas();
