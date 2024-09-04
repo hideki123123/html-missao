@@ -14,7 +14,7 @@ const perguntas= [
             },
             {
                 texto:"você se torna a pessoa mais bonita do mundo, mas seu 3°@ falece",
-                afirmacao:"Sabia que está maravilhoso! Mas uma vida vale isso:?",
+                afirmacao:"Sabia que está maravilhoso! Mas uma vida vale isso?",
             },
     ]
     },
@@ -23,11 +23,11 @@ const perguntas= [
         alternativas: [
             {
                 texto:"acabar com a poluição do do planeta, mas as árvores pegam fogo espontaneamente",
-                afirmacao: "Você acabou com a poluição, que bom né? Mas em pouco tempo qualquer sinal de natureza irá desaparecer",
+                afirmacao: "Você acabou com a poluição, que bom né? Mas em pouco tempo qualquer sinal de natureza irá desaparecer.",
             },
             {
                 texto:"toda água do mar se torna limpa, mas não existe sistema de esgoto",
-                afirmacao:"Toda água vai ser limpa, porém irá sujar tudo de novo em pouco tempo, além da nojeira que irá se sujeitar",
+                afirmacao:"Toda água vai ser limpa, porém irá sujar tudo de novo em pouco tempo, além da nojeira que irá se sujeitar.",
             },
     ]
     },
