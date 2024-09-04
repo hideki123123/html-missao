@@ -9,12 +9,12 @@ const perguntas= [
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
             {
-                texto:"ser a pessoa mais rica do mundo, mas",
-                afirmacao: "você só pode comprar coisas infláveis",
+                texto:"voce tera amigos confiaveis mas, voce nao pode pedir nada para eles",
+                afirmacao: "",
             },
             {
-                texto:"voce se torna a pessoa mais amada do mundo, mas",
-                afirmacao:"a pessoa que você mais ama te odeia",
+                texto:"o tiktok pararia de existir mas, nada de ruim acontece",
+                afirmacao:"",
             },
     ]
     },
@@ -22,12 +22,12 @@ const perguntas= [
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
             {
-                texto:"a natureza se restaura mas,",
-                afirmacao: "o seu 3° @ falece",
+                texto:"a natureza se restaura mas, o seu 3° @ falece",
+                afirmacao: "",
             },
             {
-                texto:"você tira todo lixo da praia, mas",
-                afirmacao:"o lixo vai todo para sua casa",
+                texto:"as tartarugas poderiam usar canudos para tomar agua mas, elas nao parariam de tomar até acabar",
+                afirmacao:"",
             },
     ]
     },
@@ -35,49 +35,52 @@ const perguntas= [
         enunciado: "No âmbito tecnológico, você prefere:",
         alternativas: [
             {
-                texto:"Elon musk te da toda sua fortuna, mas",
-                afirmacao: "você perde suas duas pernas",
+                texto:"elon musk te da todo o dinheiro dele, porém, voce morre",
+                afirmacao: "",
             },
             {
-                texto:"ter o melhor pc do mercado, mas",
-                afirmacao:"você não pode usar teclado",
+                texto:"fortnite é real mas...fortnite é real",
+                afirmacao:"",
             },
     ]
     },   
 ]
 
 let atual = 0;
-let perguntaAtual;
 let historiaFinal = "";
 
-function mostraPerguntas(){
+function mostraPergunta(){
     if(atual >= perguntas.length){
-        mostraPerguntas();
+        mostraResultado()
         return
     }
+
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent="";
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
-function mostraAlternativas (){
+
+function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", ()=> opcaoSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativa);
-    }
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa))
+        caixaAlternativas.appendChild(botaoAlternativa)
 
-    function respostaSelecionada (opcaoSelecionada){
-        const afirmacoes = opcaoSelecionada.afirmacoes;
-historiaFinal += afirmacoes + "";
-        atual++;
-        mostraPerguntas()
-    }
+}}
+
+function respostaSelecionada(alternativa) {
+    const afirmacoes = alternativa.afirmacao;
+    historiaFinal += afirmacoes + "";
+    atual++;
+    mostraPergunta();
 }
-function mostraResultado(){
-    caixaPerguntas.textContent = "esse caba escolheu";
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "desce duvidando, sobe acreditando...";
     textResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent ="greed";
+    caixaAlternativas.textContent = "";
 }
-mostraPerguntas();
+
+mostraPergunta()
