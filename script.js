@@ -9,11 +9,11 @@ const perguntas= [
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
             {
-                texto:"voce tera amigos confiaveis mas, voce nao pode pedir nada para eles",
+                texto:"ser a pessoa mais rica do munod, mas só poderá comprar coisas infláveis",
                 afirmacao: "",
             },
             {
-                texto:"o tiktok pararia de existir mas, nada de ruim acontece",
+                texto:"você se torna a pessoa mais bonita do mundo, mas seu 3°@ falece",
                 afirmacao:"",
             },
     ]
@@ -22,11 +22,11 @@ const perguntas= [
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
             {
-                texto:"a natureza se restaura mas, o seu 3° @ falece",
+                texto:"acabar com a poluição do do planeta, mas as árvores pegam fogo espontaneamente",
                 afirmacao: "",
             },
             {
-                texto:"as tartarugas poderiam usar canudos para tomar agua mas, elas nao parariam de tomar até acabar",
+                texto:"toda água do mar se torna limpa, mas não existe sistema de esgoto",
                 afirmacao:"",
             },
     ]
@@ -35,11 +35,11 @@ const perguntas= [
         enunciado: "No âmbito tecnológico, você prefere:",
         alternativas: [
             {
-                texto:"elon musk te da todo o dinheiro dele, porém, voce morre",
+                texto:"ter o melhor pc do mercado, mas você não pode usar o teclado",
                 afirmacao: "",
             },
             {
-                texto:"fortnite é real mas...fortnite é real",
+                texto:"ter todo conhecimento sobre programação, mas só poder ensinar, nunca usar",
                 afirmacao:"",
             },
     ]
@@ -78,7 +78,7 @@ function respostaSelecionada(alternativa) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "desce duvidando, sobe acreditando...";
+    caixaPerguntas.textContent = "Você faz um site, mas é sobre perguntas";
     textResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
