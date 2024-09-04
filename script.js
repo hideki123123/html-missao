@@ -22,7 +22,7 @@ const perguntas= [
         enunciado: "No âmbito ambiental, você prefere:",
         alternativas: [
             {
-                texto:"acabar com a poluição do do planeta, mas as árvores pegam fogo espontaneamente",
+                texto:"acabar com a poluição do planeta, mas as árvores pegam fogo espontaneamente",
                 afirmacao: "Você acabou com a poluição, que bom né? Mas em pouco tempo qualquer sinal de natureza irá desaparecer.",
             },
             {
