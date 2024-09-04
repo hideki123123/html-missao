@@ -9,7 +9,7 @@ const perguntas= [
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
             {
-                texto:"ser a pessoa mais rica do munod, mas só poderá comprar coisas infláveis",
+                texto:"ser a pessoa mais rica do mundo, mas só poderá comprar coisas infláveis",
                 afirmacao: "",
             },
             {
