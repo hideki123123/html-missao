@@ -10,11 +10,11 @@ const perguntas= [
         alternativas: [
             {
                 texto:"ser a pessoa mais rica do mundo, mas só poderá comprar coisas infláveis",
-                afirmacao: "",
+                afirmacao: "Você é rico, porém quase não compra nada.",
             },
             {
                 texto:"você se torna a pessoa mais bonita do mundo, mas seu 3°@ falece",
-                afirmacao:"",
+                afirmacao:"Sabia que está maravilhoso! Mas uma vida vale isso:?",
             },
     ]
     },
@@ -23,11 +23,11 @@ const perguntas= [
         alternativas: [
             {
                 texto:"acabar com a poluição do do planeta, mas as árvores pegam fogo espontaneamente",
-                afirmacao: "",
+                afirmacao: "Você acabou com a poluição, que bom né? Mas em pouco tempo qualquer sinal de natureza irá desaparecer",
             },
             {
                 texto:"toda água do mar se torna limpa, mas não existe sistema de esgoto",
-                afirmacao:"",
+                afirmacao:"Toda água vai ser limpa, porém irá sujar tudo de novo em pouco tempo, além da nojeira que irá se sujeitar",
             },
     ]
     },
@@ -36,11 +36,11 @@ const perguntas= [
         alternativas: [
             {
                 texto:"ter o melhor pc do mercado, mas você não pode usar o teclado",
-                afirmacao: "",
+                afirmacao: "Vôce tem um pc brabo, mas quase não usa ele.",
             },
             {
                 texto:"ter todo conhecimento sobre programação, mas só poder ensinar, nunca usar",
-                afirmacao:"",
+                afirmacao:"Apesar de ser um expert em programação, nunca mostrará ao mundo seu dom.",
             },
     ]
     },   
@@ -78,7 +78,7 @@ function respostaSelecionada(alternativa) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Você faz um site, mas é sobre perguntas";
+    caixaPerguntas.textContent = "No final, você escolheu...";
     textResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
